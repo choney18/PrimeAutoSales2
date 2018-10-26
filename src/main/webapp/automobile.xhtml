@@ -19,11 +19,15 @@
                     <p:tab title="(tabview):tab2">
                         content2
                     </p:tab>
-                    <p:tab title="(tabview):tab3">
+                    <p:tab title="(tabview):tab3"
+                           rendered="#{(mainViewController.selectionType eq 'specification2') or (mainViewController.selectionType eq 'specification3')}">
                         content3
                     </p:tab>
                 </p:tabView>
-                
+                <p:tabView value="#{mainViewController.objects}" var="objects">
+                    <p:tab title="#{objects.info1}">
+                        #{objects.info2}</p:tab>
+                </p:tabView>
             </ui:define>
         </ui:composition>
     </h:body>
