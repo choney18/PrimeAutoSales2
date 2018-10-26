@@ -11,6 +11,10 @@
     <h:body>
         <ui:composition template="layout/template.xhtml">
             <ui:define name="content">
+                <p:notificationBar position="top" effect="slide" widgetVar="bar">
+                    <h:outputText value="Toggled Succesfully" style="font-size:36px;"/>
+                    <p:commandButton value="onclick=PF('widgetVar=bar').hide()" onclick="PF('bar').hide()" type="button" icon="ui-icon-arrow-1-n"/>
+                </p:notificationBar>
                 <p:panel header="panelHeader" closable="true" toggleable="true"
                          closeTitle="Close">
                     Welcome message     
@@ -30,9 +34,23 @@
                     </p:fieldset>
                     
                     <p:fieldset legend="fieldsetLegend3" toggleable="true" toggleSpeed="300">
+                        <p:ajax event="toggle" onsuccess="PF('bar').show();"/>
                         <p:panelGrid columns="2">
                             <h:outputText value="h:o panelGrid1"/>
+                            <p:scrollPanel mode="native" style="width: 500px; height: 100px;">
                             <h:outputText value="h:o panelGrid2"/>
+                            <br/>
+                            <h:outputText value="h:o scroll"/>
+                            <br/>
+                            <h:outputText value="h:o scroll"/>
+                            <br/>
+                            <h:outputText value="h:o ."/>
+                            <br/>
+                            <h:outputText value="h:o ."/>
+                            <br/>
+                            <h:outputText value="h:o ."/>
+                            <br/>
+                            </p:scrollPanel>
                         </p:panelGrid>
                     </p:fieldset>
                     
