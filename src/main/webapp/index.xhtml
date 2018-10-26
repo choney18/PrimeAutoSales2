@@ -11,9 +11,31 @@
     <h:body>
         <ui:composition template="layout/template.xhtml">
             <ui:define name="content">
-                <p:panel header="Header" closable="true" toggleable="true"
+                <p:panel header="panelHeader" closable="true" toggleable="true"
                          closeTitle="Close">
-                    Welcome message                
+                    Welcome message     
+                    
+                    <p:fieldset legend="fieldsetLegend1" toggleable="true" toggleSpeed="300">
+                        <p:panelGrid columns="2">
+                            <h:outputText value="h:o panelGrid1"/>
+                            <h:outputText value="h:o panelGrid2"/>
+                        </p:panelGrid>
+                    </p:fieldset>
+                    
+                    <p:fieldset legend="fieldsetLegend2" toggleable="true" toggleSpeed="300">
+                        <p:panelGrid columns="2">
+                            <h:outputText value="h:o panelGrid1"/>
+                            <h:outputText value="h:o panelGrid2"/>
+                        </p:panelGrid>
+                    </p:fieldset>
+                    
+                    <p:fieldset legend="fieldsetLegend3" toggleable="true" toggleSpeed="300">
+                        <p:panelGrid columns="2">
+                            <h:outputText value="h:o panelGrid1"/>
+                            <h:outputText value="h:o panelGrid2"/>
+                        </p:panelGrid>
+                    </p:fieldset>
+                    
                 </p:panel>
             </ui:define>
         </ui:composition>
