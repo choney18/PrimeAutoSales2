@@ -11,7 +11,10 @@
     <h:body>
         <ui:composition template="layout/template.xhtml">
             <ui:define name="content">
-                Body
+                <p:panel header="Header" closable="true" toggleable="true"
+                         closeTitle="Close">
+                    Welcome message                
+                </p:panel>
             </ui:define>
         </ui:composition>
     </h:body>
